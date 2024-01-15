@@ -13,5 +13,6 @@ public class ResDebtInvoiceItem {
 
 	private String type;
 
-	private String amount;
+	private Double amount;
+
 }

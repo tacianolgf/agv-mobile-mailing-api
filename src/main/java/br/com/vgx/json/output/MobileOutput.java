@@ -25,14 +25,10 @@ public class MobileOutput implements Serializable {
 
 	private MobileDataOutput data;
 
-	public void initData() {
-		this.data = new MobileDataOutput();
-		this.data.setCustomer(new MobileCustomerOutput());
-	}
-
 	public MobileOutput() {
 		this.transactionId = UUID.randomUUID().toString();
 		this.createdAt = LocalDateTime.now();
+		this.data = new MobileDataOutput();
 	}
 
 }
