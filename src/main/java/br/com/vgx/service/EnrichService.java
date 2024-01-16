@@ -69,7 +69,6 @@ public class EnrichService {
 
 		account.setId(debtRes.getBillingAccountId());
 		account.setDebtValue(debtRes.getTotalInvoicesAmount());
-
 		for (var mobileInvoice : debtRes.getInvoices()) {
 			for (var mobileItens : mobileInvoice.getInvoiceItems()) {
 				final var invoice = new MobileInvoiceOutput();
@@ -78,7 +77,6 @@ public class EnrichService {
 				account.getInvoices().add(invoice);
 			}
 		}
-
 		output.getData().getAccounts().add(account);
 
 		final List<Integer> invoiceItems = new ArrayList<>();
@@ -87,7 +85,6 @@ public class EnrichService {
 				invoiceItems.add(invoiceItem.getNumber());
 			}
 		}
-		;
 
 		return output;
 	}
